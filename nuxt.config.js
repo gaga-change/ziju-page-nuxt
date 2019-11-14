@@ -55,11 +55,22 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel: {
+      "plugins": [
+        [
+          "component",
+          {
+            "libraryName": "element-ui",
+            "styleLibraryName": "theme-chalk"
+          }
+        ]
+      ]
+    },
     transpile: [/^element-ui/],
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
