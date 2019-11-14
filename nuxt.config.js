@@ -1,5 +1,9 @@
 
 module.exports = {
+  server: {
+    port: 9820, // default: 3000
+    host: '127.0.0.1' // default: localhost,
+  },
   mode: 'universal',
   /*
   ** Headers of the page
@@ -23,7 +27,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    '@/assets/css/normalize.css',
+    '@/assets/less/public.less',
+    'element-ui/lib/theme-chalk/index.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -55,6 +61,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     babel: {
       "plugins": [
         [

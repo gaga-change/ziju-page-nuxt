@@ -3,7 +3,7 @@
     <div>
       <ul>
         <li v-for="item in posts" :key="item._id">
-          {{item.title}}
+          {{ item.title }}
         </li>
       </ul>
     </div>
@@ -11,15 +11,12 @@
 </template>
 
 <script>
-
 export default {
-  async asyncData ({$axios, req}) {
-    console.log($axios)
-    const {list} = await $axios.$get('/api/posts')
-    console.log(list)
+  async asyncData({ $axios, req }) {
+    const { list } = await $axios.$get("/api/posts");
     return {
       posts: list
-    }
+    };
   }
-}
+};
 </script>
