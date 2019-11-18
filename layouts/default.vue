@@ -8,7 +8,9 @@
         <el-main>
           <nuxt />
         </el-main>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="220px">
+          <v-aside />
+        </el-aside>
       </el-container>
       <el-footer>
         <v-footer />
@@ -21,10 +23,12 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Aside from "@/components/Aside";
 export default {
   components: {
     "v-header": Header,
-    "v-footer": Footer
+    "v-footer": Footer,
+    "v-aside": Aside
   }
 };
 </script>

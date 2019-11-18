@@ -38,7 +38,7 @@ if (process.client) {
 
 export default {
   async fetch({ store, params }) {
-    await store.dispatch("getMenus");
+    await Promise.all([store.dispatch("getMenus"), store.dispatch('getCategories')])
   },
   async asyncData({ $axios, req }) {
     const { list } = await $axios.$get("/api/posts?pageSize=999");
@@ -89,16 +89,6 @@ export default {
   .image {
     width: 100%;
     display: block;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-
-  .clearfix:after {
-    clear: both;
   }
 }
 </style>

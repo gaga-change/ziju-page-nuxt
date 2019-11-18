@@ -29,6 +29,7 @@ module.exports = {
   css: [
     '@/assets/css/normalize.css',
     '@/assets/less/public.less',
+    '@/assets/less/main.less',
     'element-ui/lib/theme-chalk/index.css',
   ],
   /*
