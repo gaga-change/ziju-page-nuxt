@@ -9,8 +9,15 @@
       :default-active="activeIndex"
       @select="handleSelect"
     >
-      <el-menu-item index="1">处理中心</el-menu-item>
-      <el-submenu index="2">
+      <el-menu-item
+        v-for="item in menus"
+        :index="item._id"
+        :key="item._id"
+      >
+        <router-link :to="item.path">{{item.name}}</router-link>
+      </el-menu-item>
+      <!-- <el-menu-item index="3">消息中心</el-menu-item> -->
+      <!-- <el-submenu index="2">
         <template slot="title">
           我的工作台</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
@@ -23,16 +30,13 @@
           <el-menu-item index="2-4-3">选项3</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item
-        index="3"
-        disabled
-      >消息中心</el-menu-item>
+     
       <el-menu-item index="4">
         <a
           href="https://www.ele.me"
           target="_blank"
         >订单管理</a>
-      </el-menu-item>
+      </el-menu-item> -->
     </el-menu>
   </div>
 </template>
@@ -40,9 +44,13 @@
 export default {
   data() {
     return {
-      activeIndex: "1",
-      activeIndex2: "1"
+      activeIndex: undefined
     };
+  },
+  computed: {
+    menus() {
+      return this.$store.state.menus;
+    }
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -64,10 +72,24 @@ export default {
   }
   .left-area {
     float: left;
+    height: 100%;
   }
   .right-area {
     float: right;
     border: none;
+    background-color: transparent;
+    li {
+      &:hover {
+        background-color: transparent !important;
+      }
+      a {
+        text-decoration: none;
+        // color: #1989fa;
+        // opacity: 0.5;
+        // display: block;
+        // padding: 0 22px;
+      }
+    }
   }
 }
 </style>
