@@ -26,7 +26,7 @@ import {
   // Select,
   // Option,
   // OptionGroup,
-  // Button,
+  Button,
   // ButtonGroup,
   // Table,
   // TableColumn,
@@ -45,14 +45,14 @@ import {
   // Tree,
   // Alert,
   // Slider,
-  // Icon,
-  // Row,
-  // Col,
+  Icon,
+  Row,
+  Col,
   // Upload,
   // Progress,
   // Spinner,
   // Badge,
-  // Card,
+  Card,
   // Rate,
   // Steps,
   // Step,
@@ -105,7 +105,7 @@ Vue.use(MenuItem);
 // Vue.use(Select);
 // Vue.use(Option);
 // Vue.use(OptionGroup);
-// Vue.use(Button);
+Vue.use(Button);
 // Vue.use(ButtonGroup);
 // Vue.use(Table);
 // Vue.use(TableColumn);
@@ -124,14 +124,14 @@ Vue.use(MenuItem);
 // Vue.use(Tree);
 // Vue.use(Alert);
 // Vue.use(Slider);
-// Vue.use(Icon);
-// Vue.use(Row);
-// Vue.use(Col);
+Vue.use(Icon);
+Vue.use(Row);
+Vue.use(Col);
 // Vue.use(Upload);
 // Vue.use(Progress);
 // Vue.use(Spinner);
 // Vue.use(Badge);
-// Vue.use(Card);
+Vue.use(Card);
 // Vue.use(Rate);
 // Vue.use(Steps);
 // Vue.use(Step);
