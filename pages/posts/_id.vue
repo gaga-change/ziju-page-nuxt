@@ -32,7 +32,7 @@ export default {
   },
   head() {
     return {
-      title: this.detail.title
+      title: this.detail.title + ' - 紫菊'
     };
   },
   mounted() {
@@ -41,7 +41,6 @@ export default {
   methods: {
     // 渲染效果
     renderIframe() {
-      console.log(this.detail);
       const { source } = this.detail;
       const { css, html } = source;
       let dom = this.$refs["iframe"];

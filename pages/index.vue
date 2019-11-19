@@ -8,7 +8,7 @@
           :key="item._id"
           style="width:236px"
         >
-        <router-link :to="{name: 'post-id', params: {id: item._id}}">
+        <router-link :to="{name: 'posts-id', params: {id: item._id}}">
           <el-card :body-style="{ padding: '0px' }">
             <img
               :src="item.imgUrl"
@@ -47,6 +47,11 @@ export default {
     return {
       posts: list,
       currentDate: new Date()
+    };
+  },
+  head() {
+    return {
+      title: '紫菊 - 首页'
     };
   },
   mounted() {

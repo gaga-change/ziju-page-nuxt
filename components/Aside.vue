@@ -8,11 +8,12 @@
         分类
       </div>
       <div
-        v-for="item in categories"
+        v-for="(item, index) in categories"
         :key="item._id"
         class="f12"
+        :class="{'mt10': index > 0}"
       >
-        {{item.name }}
+        <router-link :to="{name: 'categories-id', params: {id: item._id}}" class=""> {{item.name }}</router-link>
       </div>
     </el-card>
   </div>

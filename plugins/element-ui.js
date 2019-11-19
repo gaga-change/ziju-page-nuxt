@@ -75,7 +75,7 @@ import {
   // Image,
   // Calendar,
   Backtop,
-  // PageHeader,
+  PageHeader,
   // CascaderPanel,
   // Loading,
   // MessageBox,
@@ -154,7 +154,7 @@ Vue.use(Footer);
 // Vue.use(Image);
 // Vue.use(Calendar);
 Vue.use(Backtop);
-// Vue.use(PageHeader);
+Vue.use(PageHeader);
 // Vue.use(CascaderPanel);
 
 // Vue.use(Loading.directive);

@@ -1,7 +1,7 @@
 <template>
   <div class="ComponentsHeader clearfix">
     <div class="left-area ">
-      <h2>紫菊</h2>
+      <h2 @click="$router.push('/')">紫菊</h2>
     </div>
     <el-menu
       class="right-area"
@@ -73,6 +73,9 @@ export default {
   .left-area {
     float: left;
     height: 100%;
+    h2 {
+      cursor: pointer;
+    }
   }
   .right-area {
     float: right;
