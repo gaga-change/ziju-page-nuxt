@@ -8,6 +8,7 @@
           :key="item._id"
           style="width:236px"
         >
+        <router-link :to="{name: 'post-id', params: {id: item._id}}">
           <el-card :body-style="{ padding: '0px' }">
             <img
               :src="item.imgUrl"
@@ -24,6 +25,7 @@
               </div>
             </div>
           </el-card>
+          </router-link>
         </div>
       </div>
     </div>
@@ -38,7 +40,7 @@ if (process.client) {
 
 export default {
   async fetch({ store, params }) {
-    await Promise.all([store.dispatch("getMenus"), store.dispatch('getCategories')])
+    await Promise.all([store.dispatch("initWeb")])
   },
   async asyncData({ $axios, req }) {
     const { list } = await $axios.$get("/api/posts?pageSize=999");
@@ -69,6 +71,9 @@ export default {
 
   .grid-item {
     margin-bottom: 10px;
+    a {
+      text-decoration: none;
+    }
   }
 
   .time {

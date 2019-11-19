@@ -1,3 +1,5 @@
+import { inherits } from "util"
+
 export const state = () => ({
   menus: [],
   categories: []
@@ -20,5 +22,8 @@ export const actions = {
   async getCategories({commit}) {
     const {list} = await this.$axios.$get('/api/categories?select=id name&pageSize=999')
     commit('setCategories', list)
+  },
+  async initWeb({dispatch}) {
+    await Promise.all([dispatch("getMenus"), dispatch('getCategories')])
   }
 }
