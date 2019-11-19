@@ -16,11 +16,11 @@
             <div style="padding: 14px;">
               <span>{{item.title}}</span>
               <div class="bottom clearfix">
-                <time class="time">{{ item.createdAt }}</time>
-                <el-button
+                <time class="time">{{ item.createdAt | date }}</time>
+                <!-- <el-button
                   type="text"
                   class="button"
-                >操作按钮</el-button>
+                >操作按钮</el-button> -->
               </div>
             </div>
           </el-card>
