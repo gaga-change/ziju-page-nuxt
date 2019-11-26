@@ -63,6 +63,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '//cdn.yanjd.top/ziju/_nuxt',
     extractCSS: true,
     babel: {
       "plugins": [
